@@ -9,7 +9,6 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir/div_by_2-5.0
-./autogen.sh
 ./configure --prefix=${prefix}
 make
 make install
