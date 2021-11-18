@@ -9,7 +9,10 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir/div_by_2-5.0
-./configure
+./configure --prefix=${prefix} \
+            --build=$(uname -m)-aarch64-linux-gnu \
+            --host=$(uname -m)-aarch64-linux-gnu  \
+            --target=$(uname -m)-aarch64-linux-gnu
 make
 make install
 """
