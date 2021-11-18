@@ -9,7 +9,7 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir/div_by_2-5.0
-./configure --prefix=${prefix} CC=gcc-9 
+./configure
 make
 make install
 """
