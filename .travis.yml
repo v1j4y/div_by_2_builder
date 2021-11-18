@@ -1,6 +1,16 @@
 language: julia
 os:
 - linux
+dist:
+- focal
+addons:
+  apt:
+      packages:
+      - g++-9
+      - gdb
+      - make
+      - automake
+      - libtool
 julia:
 - 1.0
 install: make get-deps
