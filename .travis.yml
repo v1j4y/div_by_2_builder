@@ -6,8 +6,7 @@ dist:
 addons:
   apt:
       packages:
-      - g++-9
-      - gdb
+      - gcc-9
       - make
       - automake
       - libtool
