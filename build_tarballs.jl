@@ -3,7 +3,7 @@ using BinaryBuilder
 # Collection of sources required to build Xsum
 sources = [
     "https://github.com/v1j4y/div_by_2/releases/download/v5.0/div_by_2-5.0.tar.gz" =>
-    "c860b07e114321e10e5d9e5598ad4696",
+    "68c13113d738611d48e998d2f966809b132d61095b0305d5b7d2497c99a3e2e4",
 ]
 
 # Bash recipe for building across all platforms
