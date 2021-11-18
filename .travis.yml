@@ -9,6 +9,7 @@ addons:
       - build-essential
       - gcc-9
       - libc6-dev
+      - glibc-source
       - make
       - automake
       - libtool
