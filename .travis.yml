@@ -6,7 +6,9 @@ dist:
 addons:
   apt:
       packages:
+      - build-essential
       - gcc-9
+      - libc6-dev
       - make
       - automake
       - libtool
