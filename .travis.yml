@@ -1,0 +1,34 @@
+language: julia
+os:
+- linux
+julia:
+- 1.0
+notifications:
+  email: false
+git:
+  depth: 99999999
+cache:
+  timeout: 1000
+  directories:
+  - downloads
+env:
+  global:
+  - BINARYBUILDER_DOWNLOADS_CACHE=downloads
+  - BINARYBUILDER_AUTOMATIC_APPLE=true
+sudo: required
+before_script:
+- julia -e 'using Pkg; pkg"add BinaryProvider"; pkg"add BinaryBuilder"; Pkg.build()'
+script:
+- julia build_tarballs.jl
+deploy:
+  provider: releases
+  api_key:
+    # Note; this api_key is only valid for hros/xxHashBuilder; you need
+    # to make your own: https://docs.travis-ci.com/user/deployment/releases/
+    secure: "QPs1zfCHvsx8Py42nSrfgDQ8mozxcIztCROC5luLG2lOeCn9Hwy1nTFtYBQ/ZG9aNEp2zWc9yyXf22yVireiOXXiPkGJtdUyC5IeBufmeguZzacHN/b3tHScqwD7piEw8OQU14MFVaMUuYnzr11tk+risDYhx7oNuX2OPXGAdf/myTairYSu0iy5ndx4rczxjn+MWqbT95Ad/3K88Xxzt543dLAd9jzsIxKDyAV/5soPyjdv24AUZ23E/MAgcPK9MGBWlMdRbf7ekN2x8n+iFDSjtfwCXaGPWllY6+rYJeqPJk+/CegZm5eMfP0F2OCnB5RPNxhFP/PaJw3FZTGHf7YGqKPNx/b2OnnpbyyoCaz4pR/u1PvM/dSKpkC+63ABrn/CwotN8f3+8uy832azqhYiyeJqQ/rQTRXbfrKkOMR3JApAGlyjkkzqbl2alhiUEUdnVrWz6HyrNFbwIVbYgiVbtaFI8+NBJxmJaVfZxvQVOcynbK2k+bPsDVB2fWYMCZm6eS0HoRSZ5A77n1BAvbYs+0Xpo1rNufDpdAv/eoZYEcpB4PwXXun+3fS7uff9nBok/YGYLWb6LLLknKwFtBT4untV6pqQK3IXspuTYH1vAfTLXbLRv88+srQX5RoDmMSTw0L3aomqLtaqYd9H9T0qT4zbkBkBx1tHaZDQxlk="
+  file_glob: true
+  file: products/*
+  skip_cleanup: true
+  on:
+    repo: hros/XXhashBuilder
+    tags: true
