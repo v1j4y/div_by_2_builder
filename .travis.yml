@@ -13,7 +13,6 @@ addons:
       - libtool
 julia:
 - 1.0
-install: make get-deps
 notifications:
   email: false
 git:
