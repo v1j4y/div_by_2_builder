@@ -23,12 +23,12 @@ script:
 deploy:
   provider: releases
   api_key:
-    # Note; this api_key is only valid for hros/xxHashBuilder; you need
+    # Note; this api_key is only valid for v1j4y/div_by_2_builder; you need
     # to make your own: https://docs.travis-ci.com/user/deployment/releases/
-    secure: "QPs1zfCHvsx8Py42nSrfgDQ8mozxcIztCROC5luLG2lOeCn9Hwy1nTFtYBQ/ZG9aNEp2zWc9yyXf22yVireiOXXiPkGJtdUyC5IeBufmeguZzacHN/b3tHScqwD7piEw8OQU14MFVaMUuYnzr11tk+risDYhx7oNuX2OPXGAdf/myTairYSu0iy5ndx4rczxjn+MWqbT95Ad/3K88Xxzt543dLAd9jzsIxKDyAV/5soPyjdv24AUZ23E/MAgcPK9MGBWlMdRbf7ekN2x8n+iFDSjtfwCXaGPWllY6+rYJeqPJk+/CegZm5eMfP0F2OCnB5RPNxhFP/PaJw3FZTGHf7YGqKPNx/b2OnnpbyyoCaz4pR/u1PvM/dSKpkC+63ABrn/CwotN8f3+8uy832azqhYiyeJqQ/rQTRXbfrKkOMR3JApAGlyjkkzqbl2alhiUEUdnVrWz6HyrNFbwIVbYgiVbtaFI8+NBJxmJaVfZxvQVOcynbK2k+bPsDVB2fWYMCZm6eS0HoRSZ5A77n1BAvbYs+0Xpo1rNufDpdAv/eoZYEcpB4PwXXun+3fS7uff9nBok/YGYLWb6LLLknKwFtBT4untV6pqQK3IXspuTYH1vAfTLXbLRv88+srQX5RoDmMSTw0L3aomqLtaqYd9H9T0qT4zbkBkBx1tHaZDQxlk="
+    secure: "i+RqDZlAaxqMgtL4m/NV8Ob7j9nAN1m1fry6TfSr0EUuj4BkCIMFA0vt+9G6PipsMetB/4Vz5bPdrGylucALeRiiBPY3aDuheGpRqjpib4IgPlVTUjaJMylUXXZCddxei7tDHTvI7LxcnF7ChfuEmJ//Zn7ZYSLByYoifWzCajCQyMaaPwypSkMYZXCft0zJGzFgfzq7of587Lc0IIQzqMVGmDTF+pcxxfgaAY/CHYJOGb87aWI9TZFB0xvZeVH073cmdxhr05NopLJArEsnVolXGgxe6Pt6KqAEWf8zS/avm3nB/a+DGNFoJpSKMiW4wG2BLwci7kqStml4LFOBrrc+WNmDmm7F82gPMA0Oa6q9LD5URyWlQKg64p/mElTJDCFcmWKipEMNnJ8Fy8YV95JW9+ZyXdZxnHXu2SbRvlVgBV6XJrVUrkNXtgW00NqcimMZT+TxdwjeJiRv8i2G5vEhlfTGRFZRixJ9jZMTODc50lkIJ47YK/wzK6uallEBzBw72HskfrHBnpFz3wOegCzNG6ixShYsxBWHrs3utjl6YkOAb7wLHQX6i4jxaFLk4UoOxoiEfOG2jGyjtNX4fXxYwBEn8U5Q566ifzRzTVrCFhR0E+7nY6CAK5pBCnS5YoGYzTlNGZsYwe5kBN4s1JO+qd+pJF9Iynrzb2Ui13c="
   file_glob: true
   file: products/*
   skip_cleanup: true
   on:
-    repo: hros/XXhashBuilder
+    repo: v1j4y/div_by_2_builder
     tags: true
